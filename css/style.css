@@ -1064,6 +1064,56 @@ section {
 }
 
 /* =========================================
+   10. PROCESS STEPS
+   ========================================= */
+.process-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.process-step:nth-child(even) {
+    direction: rtl;
+}
+
+.process-step:nth-child(even)>* {
+    direction: ltr;
+}
+
+.process-img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.process-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.number-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.process-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary);
+    opacity: 0.2;
+    line-height: 1;
+}
+
+/* =========================================
    9. RESPONSIVE
    ========================================= */
 @media (max-width: 991px) {
@@ -1107,8 +1157,13 @@ section {
 
     .process-step,
     .process-step:nth-child(even) {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        direction: ltr;
         text-align: center;
+    }
+
+    .number-container {
+        justify-content: center;
     }
 }
 
