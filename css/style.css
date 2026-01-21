@@ -966,7 +966,85 @@ section {
 }
 
 /* =========================================
-   8. RESPONSIVE
+   8. SOCIAL LOGIN
+   ========================================= */
+.social-login-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.social-login-separator::before,
+.social-login-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.social-login-separator::before {
+    margin-right: .5em;
+}
+
+.social-login-separator::after {
+    margin-left: .5em;
+}
+
+.social-login-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-google {
+    background: #fff;
+    color: #4b5563;
+    border: 1px solid var(--border-color);
+}
+
+.btn-google:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .btn-google {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-google:hover {
+    background: var(--bg-body);
+}
+
+.btn-facebook {
+    background: #1877F2;
+    color: #fff;
+    border: 1px solid #1877F2;
+}
+
+.btn-facebook:hover {
+    background: #166fe5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(24, 119, 242, 0.25);
+}
+
+/* =========================================
+   9. RESPONSIVE
    ========================================= */
 @media (max-width: 991px) {
     .navbar .nav-links {
@@ -1102,5 +1180,9 @@ section {
     .left::after,
     .right::after {
         left: 10px;
+    }
+
+    .social-login-buttons {
+        flex-direction: column;
     }
 }
