@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Software Company</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> Soft<span>Ware</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <li class="nav-item dropdown">
+                    <a href="#">Home <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1 - Corporate</a></li>
+                        <li><a href="home-2.html">Home 2 - Product</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item"><a href="tech-stack.html">Tech Stack</a></li>
+                <li class="nav-item"><a href="projects.html">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+                <li class="nav-item header-actions auth-buttons">
+                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&h=1080&q=80'); min-height: 50vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content animate-on-scroll slide-in-left">
+                <span class="section-subtitle">What We Do</span>
+                <h1 class="text-gradient">Our Services</h1>
+                <p>Comprehensive technical solutions tailored to your business needs.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hub Grid -->
+    <section>
+        <div class="container">
+            <div class="services-grid">
+                <!-- Web -->
+                <a href="service-web.html" class="card animate-on-scroll pop-up"
+                    style="display: block; color: inherit; text-decoration: none;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&h=200&q=80" alt="Web Dev">
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, high-performance websites and web applications.</p>
+                    <span style="color: var(--primary); font-weight: 500; font-size: 0.9rem;">Learn More <i
+                            class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Mobile -->
+                <a href="service-mobile.html" class="card animate-on-scroll pop-up delay-100"
+                    style="display: block; color: inherit; text-decoration: none;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=300&h=200&q=80" alt="Mobile App">
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile apps for iOS and Android.</p>
+                    <span style="color: var(--primary); font-weight: 500; font-size: 0.9rem;">Learn More <i
+                            class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- UI/UX -->
+                <a href="service-uiux.html" class="card animate-on-scroll pop-up delay-200"
+                    style="display: block; color: inherit; text-decoration: none;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=300&h=200&q=80" alt="UI/UX">
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centric design that ensures high engagement and retention.</p>
+                    <span style="color: var(--primary); font-weight: 500; font-size: 0.9rem;">Learn More <i
+                            class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Cloud -->
+                <a href="service-cloud.html" class="card animate-on-scroll pop-up delay-100"
+                    style="display: block; color: inherit; text-decoration: none;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=300&h=200&q=80" alt="Cloud">
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Scalable cloud infrastructure and automated CI/CD pipelines.</p>
+                    <span style="color: var(--primary); font-weight: 500; font-size: 0.9rem;">Learn More <i
+                            class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- AI -->
+                <a href="service-ai.html" class="card animate-on-scroll pop-up delay-200"
+                    style="display: block; color: inherit; text-decoration: none;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=300&h=200&q=80" alt="AI">
+                    </div>
+                    <h3>AI & Automation</h3>
+                    <p>Intelligent algorithms to automate workflows and drive insights.</p>
+                    <span style="color: var(--primary); font-weight: 500; font-size: 0.9rem;">Learn More <i
+                            class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display: inline-flex;"><i
+                            class="fas fa-cube"></i> Soft<span>Ware</span></a>
+                    <p style="color: var(--text-muted);">Empowering businesses with cutting-edge software.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street</li>
+                        <li><i class="fas fa-envelope"></i> hello@software.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

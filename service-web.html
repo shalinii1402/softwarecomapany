@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Software Company</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Nav (Standard) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> Soft<span>Ware</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <li class="nav-item dropdown">
+                    <a href="#">Home <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1 - Corporate</a></li>
+                        <li><a href="home-2.html">Home 2 - Product</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item"><a href="tech-stack.html">Tech Stack</a></li>
+                <li class="nav-item"><a href="projects.html">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+                <li class="nav-item header-actions auth-buttons">
+                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&h=1080&q=80'); min-height: 60vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content animate-on-scroll slide-in-left">
+                <span class="section-subtitle">Service</span>
+                <h1 class="text-gradient">Web Development</h1>
+                <p>Custom websites and web applications built for speed, scalability, and performance.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Description -->
+    <section>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="animate-on-scroll slide-in-left">
+                    <h2 class="section-title">Scalable Web Solutions</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        We specialize in creating robust web applications using the latest technologies. Whether it's a
+                        simple corporate site or a complex SaaS platform, we deliver code that is clean, secure, and
+                        maintainable.
+                    </p>
+                    <ul style="color: var(--text-muted); list-style: disc; padding-left: 1.5rem;">
+                        <li>Frontend: React, Vue, Angular</li>
+                        <li>Backend: Node.js, Python, PHP</li>
+                        <li>E-commerce: Shopify, WooCommerce</li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll pop-up delay-100"
+                    style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&h=400&q=80" alt="Coding">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process (Images) -->
+    <section style="background: var(--bg-card);">
+        <div class="container">
+            <div class="section-header animate-on-scroll pop-up">
+                <span class="section-subtitle">How We Work</span>
+                <h2 class="section-title">Our Process</h2>
+            </div>
+
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-step animate-on-scroll pop-up">
+                    <div class="process-img">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&h=300&q=80" alt="Planning">
+                    </div>
+                    <div class="process-content">
+                        <span class="process-number">01</span>
+                        <h3>Discovery & Planning</h3>
+                        <p style="color: var(--text-muted);">We start by understanding your business goals and technical
+                            requirements to create a roadmap.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="process-step animate-on-scroll pop-up delay-100">
+                    <div class="process-img">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&h=300&q=80" alt="Development">
+                    </div>
+                    <div class="process-content">
+                        <span class="process-number">02</span>
+                        <h3>Design & Development</h3>
+                        <p style="color: var(--text-muted);">Our designers create prototypes while developers build the
+                            core functionality using agile methods.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="process-step animate-on-scroll pop-up delay-200">
+                    <div class="process-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&h=300&q=80" alt="Launch">
+                    </div>
+                    <div class="process-content">
+                        <span class="process-number">03</span>
+                        <h3>Testing & Launch</h3>
+                        <p style="color: var(--text-muted);">Rigorous QA testing ensures a bug-free launch, followed by
+                            deployment to cloud servers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits (Cards) -->
+    <section>
+        <div class="container">
+            <div class="section-header animate-on-scroll pop-up">
+                <span class="section-subtitle">Why Us</span>
+                <h2 class="section-title">Key Benefits</h2>
+            </div>
+            <div class="services-grid">
+                <div class="card animate-on-scroll pop-up">
+                    <h3>Responsive Design</h3>
+                    <p>Looks great on all devices, from desktops to smartphones.</p>
+                </div>
+                <div class="card animate-on-scroll pop-up delay-100">
+                    <h3>SEO Optimized</h3>
+                    <p>Built with search engines in mind for better visibility.</p>
+                </div>
+                <div class="card animate-on-scroll pop-up delay-200">
+                    <h3>Fast Performance</h3>
+                    <p>Optimized for speed to reduce bounce rates and improve UX.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&h=600&q=80');">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <h2>Start Your Web Project</h2>
+            <p>Let's build something amazing together.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display: inline-flex;"><i
+                            class="fas fa-cube"></i> Soft<span>Ware</span></a>
+                    <p style="color: var(--text-muted);">Empowering businesses with cutting-edge software.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street</li>
+                        <li><i class="fas fa-envelope"></i> hello@software.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

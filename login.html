@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Software Company</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: var(--bg-body);">
+
+    <div class="auth-container">
+        <div class="auth-box animate-on-scroll pop-up">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="index.html" class="logo"
+                    style="display: inline-flex; font-size: 2rem; justify-content: center; margin-bottom: 0.5rem; text-decoration: none;">
+                    <i class="fas fa-cube"></i> Soft<span>Ware</span>
+                </a>
+                <h2 style="font-size: 1.5rem;">Welcome Back</h2>
+                <p style="color: var(--text-muted);">Please log in to your account</p>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" style="color: var(--primary);">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Log In</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.95rem;">
+                Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: 500;">Sign
+                    Up</a>
+                <br>
+                <a href="index.html"
+                    style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; display: inline-block;">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
