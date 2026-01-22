@@ -1338,3 +1338,57 @@ section {
         flex-direction: column;
     }
 }
+
+/* =========================================
+   11. RESPONSIVE GRID UTILITIES
+   ========================================= */
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .split-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem;
+        text-align: center !important;
+    }
+
+    .split-grid>div {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Reverse order to put image on top when text is first in HTML */
+    .split-grid.reverse-mobile>div:first-child {
+        order: 2;
+    }
+
+    .split-grid.reverse-mobile>div:last-child {
+        order: 1;
+    }
+
+    .split-grid img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .split-grid .section-subtitle,
+    .split-grid .section-title,
+    .split-grid p {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .split-grid {
+        gap: 2rem;
+    }
+}
