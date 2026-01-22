@@ -854,22 +854,42 @@ section {
     color: var(--primary);
 }
 
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+    font-size: 1rem;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
 .footer-bottom {
     position: relative;
     border-top: 1px solid var(--border-color);
-    padding-top: 2rem;
+    padding-top: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--text-muted);
     font-size: 0.9rem;
-}
-
-.footer-bottom .social-links {
-    position: absolute;
-    right: 0;
-    display: flex;
-    gap: 1rem;
 }
 
 .back-to-top {
