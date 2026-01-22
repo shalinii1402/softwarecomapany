@@ -801,6 +801,21 @@ section {
     font-weight: 500;
 }
 
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 5;
+}
+
 .form-control {
     width: 100%;
     padding: 0.75rem 1rem;
@@ -810,6 +825,10 @@ section {
     color: var(--text-main);
     font-size: 1rem;
     transition: all 0.2s ease;
+}
+
+.input-group .form-control {
+    padding-left: 2.8rem;
 }
 
 .form-control:focus {
@@ -1178,11 +1197,26 @@ section {
 
     .header-actions {
         display: flex;
-        /* Ensure these override any hiding if present, though structural changes might be needed in JS/HTML if they aren't inside .nav-links for mobile */
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-actions .btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .header-actions .theme-toggle {
+        order: -1;
+        margin-right: auto;
     }
 
     .navbar .nav-links .header-actions {
@@ -1277,9 +1311,13 @@ section {
     }
 
     .btn {
-        width: 100%;
+        width: initial;
         text-align: center;
-        margin-bottom: 0.5rem;
+    }
+
+    .header-actions .btn {
+        width: calc(50% - 0.5rem);
+        min-width: unset;
     }
 
     .timeline-item {
