@@ -247,6 +247,18 @@ h3 {
     align-items: center;
 }
 
+.auth-buttons.stacked {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auth-buttons.stacked .btn {
+    width: 100%;
+}
+
 .btn {
     padding: 0.6rem 1.25rem;
     border-radius: 6px;
@@ -345,8 +357,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Ensures horizontal centering of the container */
-    padding-top: var(--header-height);
+    /* Increased padding to account for fixed header + breathing room */
+    padding-top: calc(var(--header-height) + 80px);
+    padding-bottom: 80px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -375,12 +388,14 @@ section {
 .hero .container {
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 .hero-content {
-    max-width: 800px;
-    /* Increased for better legibility and centering on larger text */
+    max-width: 850px;
     width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero p {
@@ -1390,5 +1405,21 @@ section {
 @media (max-width: 400px) {
     .split-grid {
         gap: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding-top: calc(var(--header-height) + 60px);
+        padding-bottom: 60px;
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding-top: calc(var(--header-height) + 40px);
+        padding-bottom: 40px;
+        min-height: 50vh;
     }
 }
