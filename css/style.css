@@ -482,6 +482,7 @@ section {
 .card>span:last-child {
     margin-top: auto;
     padding-top: 1rem;
+    align-self: center;
 }
 
 .card:hover {

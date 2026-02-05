@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Software Company</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -14,7 +15,7 @@
 
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
                 <i class="fas fa-cube"></i> Soft<span>Ware</span>
@@ -42,8 +43,8 @@
         </div>
     </nav>
 
-<section class="hero contact-hero"
-        style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&h=1080&q=80');">
+    <section class="hero contact-hero"
+        style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&h=1080&q=80'); min-height: 50vh;">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content animate-on-scroll fade-up">
@@ -59,72 +60,109 @@
         </div>
     </section>
 
-<section style="padding-top: 0;">
+    <section>
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 5rem;">
-                <!-- Contact Form -->
-                <div class="animate-on-scroll pop-up" style="text-align: center;">
-                    <h2 class="section-title">Send Us a Message</h2>
-                    <form style="max-width: 600px; margin: 0 auto; text-align: left;">
-                        <div class="form-group">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="your@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-control" rows="5" placeholder="Tell us about your project"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
+            <!-- Two Column Layout: Info (Left) & Form (Right) -->
+            <div class="split-grid" style="align-items: stretch; margin-bottom: 5rem;">
 
-<!-- Info / Map -->
-                <div class="animate-on-scroll pop-up delay-100" style="text-align: center;">
-                    <h2 class="section-title">Get in Touch</h2>
+                <!-- Left Column: Get in Touch -->
+                <div class="animate-on-scroll slide-in-left"
+                    style="width: 100%; display: flex; flex-direction: column;">
                     <div
-                        style="background: var(--bg-card); padding: 3rem; border-radius: 16px; margin-bottom: 4rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center;">
-                        <div style="margin-bottom: 2rem;">
-                            <h3>Visit Us</h3>
-                            <p style="color: var(--text-muted);">123 Innovation Drive,<br>Silicon Valley, CA 94000</p>
-                        </div>
-                        <div style="margin-bottom: 2rem;">
-                            <h3>Call Us</h3>
-                            <p style="color: var(--text-muted);">+1 (555) 123-4567</p>
-                        </div>
-                        <div style="margin-bottom: 2.5rem;">
-                            <h3>Email</h3>
-                            <p style="color: var(--text-muted);">hello@software.com</p>
+                        style="background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+                        <span class="section-subtitle">Contact Info</span>
+                        <h2 class="section-title" style="font-size: 2rem;">Get in Touch</h2>
+
+                        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 2rem;">
+                            <div>
+                                <div
+                                    style="width: 50px; height: 50px; background: rgba(37, 99, 235, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); font-size: 1.2rem;">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Visit Us</h3>
+                                <p style="color: var(--text-muted);">123 Innovation Drive,<br>Silicon Valley, CA 94000
+                                </p>
+                            </div>
+
+                            <div>
+                                <div
+                                    style="width: 50px; height: 50px; background: rgba(37, 99, 235, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); font-size: 1.2rem;">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Call Us</h3>
+                                <p style="color: var(--text-muted);">+1 (555) 123-4567</p>
+                            </div>
+
+                            <div>
+                                <div
+                                    style="width: 50px; height: 50px; background: rgba(37, 99, 235, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); font-size: 1.2rem;">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Email</h3>
+                                <p style="color: var(--text-muted);">hello@software.com</p>
+                            </div>
                         </div>
 
-<h3>Follow Us</h3>
-                        <div class="footer-social" style="justify-content: center; margin-top: 1.5rem;">
+                        <div class="footer-social" style="justify-content: center; margin-top: 2.5rem;">
                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
+                </div>
 
-<!-- Google Map -->
-                    <div style="display: flex; justify-content: center; width: 100%;">
-                        <div
-                            style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); height: 450px; border: 1px solid var(--border-color); width: 100%; max-width: 800px;">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101408.23727764506!2d-122.151307!3d37.4133177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7495b805c6d%3A0x609d792622720d2d!2sSilicon%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1705663673523!5m2!1sen!2sus"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                <!-- Right Column: Send Us a Message (Form) -->
+                <div class="animate-on-scroll fade-up" style="width: 100%; display: flex; flex-direction: column;">
+                    <div
+                        style="background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                        <span class="section-subtitle">Write to Us</span>
+                        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Send Us a Message</h2>
+                        <form style="width: 100%;">
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label class="form-label"
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                                <input type="text" class="form-control" placeholder="Your Name"
+                                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label class="form-label"
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                                <input type="email" class="form-control" placeholder="your@email.com"
+                                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label class="form-label"
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                                <textarea class="form-control" rows="5" placeholder="Tell us about your project"
+                                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-family: inherit;"></textarea>
+                            </div>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-primary"
+                                    style="padding: 0.75rem 2rem; font-size: 0.95rem; min-width: 180px;">Send
+                                    Message</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Google Map (Below Grid) -->
+            <div class="animate-on-scroll fade-up delay-100" style="text-align: center;">
+                <div
+                    style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); height: 450px; border: 1px solid var(--border-color); width: 100%;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101408.23727764506!2d-122.151307!3d37.4133177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7495b805c6d%3A0x609d792622720d2d!2sSilicon%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1705663673523!5m2!1sen!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -167,7 +205,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
 
-</div>
+            </div>
         </div>
     </footer>
     <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
