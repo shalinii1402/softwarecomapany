@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Left Face - Black -->
+  <path fill="#1a1a1a" d="M48 160.9l176 66v216.7l-176-66V160.9z"/>
+  <!-- Right Face - White -->
+  <path fill="#ffffff" d="M288 443.6V226.9l176-66v216.7l-176 66z"/>
+  <!-- Top Face - White -->
+  <path fill="#ffffff" d="M256 68.4l141.7 53.1L256 174.6l-141.7-53.1L256 68.4z"/>
+  <!-- Border/Outline for definition -->
+  <path fill="none" stroke="#1a1a1a" stroke-width="12" stroke-linejoin="round" d="M256 68.4l141.7 53.1L256 174.6l-141.7-53.1L256 68.4zM48 160.9l176 66v216.7l-176-66V160.9zm240 282.7V226.9l176-66v216.7l-176 66z"/>
+</svg>
