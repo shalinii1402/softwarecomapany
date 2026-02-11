@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Software Company</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -15,12 +16,15 @@
 
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
                 <i class="fas fa-cube"></i> Soft<span>Ware</span>
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
             <ul class="nav-links">
                 <li class="nav-item dropdown">
                     <a href="#">Home <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
@@ -35,7 +39,6 @@
                 <li class="nav-item"><a href="projects.html">Gallery</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
                 <li class="nav-item header-actions auth-buttons">
-                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
                     <a href="login.html" class="btn btn-outline">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </li>
@@ -43,7 +46,7 @@
         </div>
     </nav>
 
-<!-- Hero -->
+    <!-- Hero -->
     <header class="hero"
         style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&h=1080&q=80'); min-height: 60vh;">
         <div class="hero-overlay"></div>
@@ -58,7 +61,7 @@
         </div>
     </header>
 
-<!-- Company Overview -->
+    <!-- Company Overview -->
     <section>
         <div class="container">
             <div style="max-width: 850px; margin: 0 auto; text-align: center;">
@@ -85,7 +88,7 @@
         </div>
     </section>
 
-<!-- Mission & Vision -->
+    <!-- Mission & Vision -->
     <section style="background-color: var(--bg-card);">
         <div class="container">
             <div class="section-header animate-on-scroll fade-up">
@@ -124,7 +127,7 @@
         </div>
     </section>
 
-<!-- What We Do & Why Choose Us -->
+    <!-- What We Do & Why Choose Us -->
     <section>
         <div class="container">
             <div class="section-header animate-on-scroll fade-up">
@@ -168,7 +171,7 @@
         </div>
     </section>
 
-<!-- Timeline (Image Based) -->
+    <!-- Timeline (Image Based) -->
     <section style="background-color: var(--bg-card);">
         <div class="container">
             <div class="section-header animate-on-scroll fade-up">
@@ -213,7 +216,7 @@
         </div>
     </section>
 
-<!-- Team Preview -->
+    <!-- Team Preview -->
     <section>
         <div class="container">
             <div class="section-header animate-on-scroll fade-up">
@@ -265,7 +268,7 @@
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <!-- Same footer content as index.html -->
@@ -308,7 +311,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
 
-</div>
+            </div>
         </div>
     </footer>
     <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>

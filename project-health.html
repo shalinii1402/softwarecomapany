@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health & Fitness App | Project Details</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -15,12 +16,15 @@
 
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
                 <i class="fas fa-cube"></i> Soft<span>Ware</span>
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
             <ul class="nav-links">
                 <li class="nav-item"><a href="index.html">Home</a></li>
                 <li class="nav-item"><a href="about.html">About</a></li>
@@ -29,7 +33,6 @@
                 <li class="nav-item"><a href="projects.html">Gallery</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
                 <li class="nav-item header-actions auth-buttons">
-                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
                     <a href="login.html" class="btn btn-outline">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </li>
@@ -37,8 +40,9 @@
         </div>
     </nav>
 
-<!-- Project Banner -->
-    <header class="hero" style="min-height: 40vh; background-image: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg');">
+    <!-- Project Banner -->
+    <header class="hero"
+        style="min-height: 40vh; background-image: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg');">
         <div class="hero-overlay"></div>
         <div class="container animate-on-scroll slide-in-left">
             <span class="section-subtitle">Mobile Development</span>
@@ -47,43 +51,54 @@
         </div>
     </header>
 
-<!-- Project Content -->
+    <!-- Project Content -->
     <section>
         <div class="container">
             <div class="card" style="padding: 3rem; margin-top: -80px; position: relative; z-index: 2;">
                 <h2 style="margin-bottom: 2rem;">Project Overview</h2>
                 <p style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8;">
-                    A cross-platform mobile application for personal fitness tracking. Users can log workouts, track nutrition, and connect with wearable devices. Built with React Native for a native-like experience on both iOS and Android, backed by Google Firebase for real-time data sync.
+                    A cross-platform mobile application for personal fitness tracking. Users can log workouts, track
+                    nutrition, and connect with wearable devices. Built with React Native for a native-like experience
+                    on both iOS and Android, backed by Google Firebase for real-time data sync.
                 </p>
 
-<h3 style="margin-bottom: 1rem;">Technologies Used</h3>
+                <h3 style="margin-bottom: 1rem;">Technologies Used</h3>
                 <div class="tech-grid" style="justify-content: flex-start; gap: 1rem; margin-bottom: 3rem;">
-                     <span style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">React Native</span>
-<span style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">Firebase</span>
-<span style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">Redux</span>
-<span style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">TypeScript</span>
+                    <span
+                        style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">React
+                        Native</span>
+                    <span
+                        style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">Firebase</span>
+                    <span
+                        style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">Redux</span>
+                    <span
+                        style="background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); font-size: 0.9rem;">TypeScript</span>
 
-</div>
-
-<h3 style="margin-bottom: 1.5rem;">Project Gallery</h3>
-                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
-                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=400&q=80" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-md);" alt="Screenshot 1">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&h=400&q=80" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-md);" alt="Screenshot 2">
                 </div>
 
-<div style="margin-top: 4rem; text-align: center;">
-                    <a href="projects.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Gallery</a>
+                <h3 style="margin-bottom: 1.5rem;">Project Gallery</h3>
+                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=400&q=80"
+                        style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-md);" alt="Screenshot 1">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&h=400&q=80"
+                        style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-md);" alt="Screenshot 2">
+                </div>
+
+                <div style="margin-top: 4rem; text-align: center;">
+                    <a href="projects.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to
+                        Gallery</a>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-flex;"><i class="fas fa-cube"></i> Soft<span>Ware</span></a>
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-flex;"><i
+                            class="fas fa-cube"></i> Soft<span>Ware</span></a>
                     <p style="color: var(--text-muted);">Empowering businesses with cutting-edge software.</p>
                 </div>
                 <div class="footer-col">
@@ -102,7 +117,7 @@
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
-                                <div class="footer-col">
+                <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links" style="margin-bottom: 1.5rem;">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street</li>
@@ -117,12 +132,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                 <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
+                <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
 
-</div>
+            </div>
         </div>
     </footer>
     <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

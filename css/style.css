@@ -336,6 +336,20 @@ h3 {
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease;
+    margin-right: 1rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .theme-toggle {
+        margin-right: 0;
+        margin-left: 1.5rem;
+    }
 }
 
 .theme-toggle:hover {
@@ -444,10 +458,15 @@ section {
 
 /* Generic Image Cards */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+}
+
+.services-grid>* {
+    flex: 1 1 320px;
+    max-width: 380px;
 }
 
 .card {
@@ -1421,9 +1440,19 @@ section {
         padding: 0.6rem 1rem;
     }
 
+    .navbar-right {
+        order: 2;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        order: 1;
+    }
+
     .header-actions .theme-toggle {
-        order: -1;
-        margin-right: auto;
+        display: none;
     }
 
     .navbar .nav-links .header-actions {

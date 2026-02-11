@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile App Development | Software Company</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -18,7 +19,10 @@
             <a href="index.html" class="logo">
                 <i class="fas fa-cube"></i> Soft<span>Ware</span>
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
             <ul class="nav-links">
                 <li class="nav-item dropdown">
                     <a href="#">Home <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
@@ -33,7 +37,6 @@
                 <li class="nav-item"><a href="projects.html">Gallery</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
                 <li class="nav-item header-actions auth-buttons">
-                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
                     <a href="login.html" class="btn btn-outline">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </li>
@@ -41,7 +44,8 @@
         </div>
     </nav>
 
-<header class="hero" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&h=1080&q=80'); min-height: 60vh;">
+    <header class="hero"
+        style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&h=1080&q=80'); min-height: 60vh;">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content animate-on-scroll slide-in-left">
@@ -52,7 +56,7 @@
         </div>
     </header>
 
-<section>
+    <section>
         <div class="container">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
                 <div class="animate-on-scroll slide-in-left">
@@ -70,13 +74,14 @@
                 </div>
                 <div class="animate-on-scroll pop-up delay-100"
                     style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&h=400&q=80" alt="Mobile Dev">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&h=400&q=80"
+                        alt="Mobile Dev">
                 </div>
             </div>
         </div>
     </section>
 
-<section style="background: var(--bg-card);">
+    <section style="background: var(--bg-card);">
         <div class="container">
             <div class="section-header animate-on-scroll pop-up">
                 <span class="section-subtitle">How We Work</span>
@@ -85,7 +90,8 @@
             <div class="process-grid">
                 <div class="process-step animate-on-scroll pop-up">
                     <div class="process-img">
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=400&h=300&q=80" alt="Wireframing">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=400&h=300&q=80"
+                            alt="Wireframing">
                     </div>
                     <div class="process-content">
                         <span class="process-number">01</span>
@@ -96,7 +102,8 @@
                 </div>
                 <div class="process-step animate-on-scroll pop-up delay-100">
                     <div class="process-img">
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=400&h=300&q=80" alt="Coding">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=400&h=300&q=80"
+                            alt="Coding">
                     </div>
                     <div class="process-content">
                         <span class="process-number">02</span>
@@ -107,7 +114,8 @@
                 </div>
                 <div class="process-step animate-on-scroll pop-up delay-200">
                     <div class="process-img">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=400&h=300&q=80" alt="Store">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=400&h=300&q=80"
+                            alt="Store">
                     </div>
                     <div class="process-content">
                         <span class="process-number">03</span>
@@ -120,7 +128,8 @@
         </div>
     </section>
 
-<section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1920&h=600&q=80');">
+    <section class="cta-section"
+        style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1920&h=600&q=80');">
         <div class="cta-overlay"></div>
         <div class="container">
             <h2>Have an App Idea?</h2>
@@ -129,7 +138,7 @@
         </div>
     </section>
 
-<!-- Footer same as template -->
+    <!-- Footer same as template -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -154,7 +163,7 @@
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
-                                <div class="footer-col">
+                <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links" style="margin-bottom: 1.5rem;">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street</li>
@@ -171,7 +180,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
 
-</div>
+            </div>
         </div>
     </footer>
     <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>

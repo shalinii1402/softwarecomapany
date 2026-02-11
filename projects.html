@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Software Company</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
@@ -15,12 +16,15 @@
 
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
                 <i class="fas fa-cube"></i> Soft<span>Ware</span>
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
             <ul class="nav-links">
                 <li class="nav-item dropdown">
                     <a href="#">Home <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
@@ -35,7 +39,6 @@
                 <li class="nav-item active"><a href="projects.html">Gallery</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
                 <li class="nav-item header-actions auth-buttons">
-                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
                     <a href="login.html" class="btn btn-outline">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </li>
@@ -43,7 +46,7 @@
         </div>
     </nav>
 
-<header class="hero"
+    <header class="hero"
         style="min-height: 50vh; background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1920&h=1080&q=80');">
         <div class="hero-overlay"></div>
         <div class="container">
@@ -57,7 +60,7 @@
         </div>
     </header>
 
-<section>
+    <section>
         <div class="container">
             <!-- Filter -->
             <div class="gallery-filter animate-on-scroll pop-up">
@@ -67,7 +70,7 @@
                 <button class="filter-btn" onclick="filterProjects('ai')">AI</button>
             </div>
 
-<div class="gallery-grid">
+            <div class="gallery-grid">
                 <!-- Project 1 -->
                 <div class="project-card animate-on-scroll pop-up" data-category="web">
                     <img src="https://images.pexels.com/photos/32299899/pexels-photo-32299899.jpeg"
@@ -127,7 +130,7 @@
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -152,7 +155,7 @@
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
-                                <div class="footer-col">
+                <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links" style="margin-bottom: 1.5rem;">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street</li>
@@ -169,7 +172,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 SoftWare Inc. All rights reserved.</p>
 
-</div>
+            </div>
         </div>
     </footer>
     <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>

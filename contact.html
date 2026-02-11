@@ -20,7 +20,10 @@
             <a href="index.html" class="logo">
                 <i class="fas fa-cube"></i> Soft<span>Ware</span>
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
             <ul class="nav-links">
                 <li class="nav-item dropdown">
                     <a href="#">Home <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
@@ -35,7 +38,6 @@
                 <li class="nav-item"><a href="projects.html">Gallery</a></li>
                 <li class="nav-item active"><a href="contact.html">Contact</a></li>
                 <li class="nav-item header-actions auth-buttons">
-                    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
                     <a href="login.html" class="btn btn-outline">Login</a>
                     <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </li>
@@ -69,7 +71,7 @@
                 <div class="animate-on-scroll slide-in-left"
                     style="width: 100%; display: flex; flex-direction: column;">
                     <div
-                        style="background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+                        style="background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; justify-content: flex-start; text-align: center;">
                         <span class="section-subtitle">Contact Info</span>
                         <h2 class="section-title" style="font-size: 2rem;">Get in Touch</h2>
 
@@ -115,10 +117,10 @@
                 <!-- Right Column: Send Us a Message (Form) -->
                 <div class="animate-on-scroll fade-up" style="width: 100%; display: flex; flex-direction: column;">
                     <div
-                        style="background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                        style="background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; justify-content: flex-start; text-align: center;">
                         <span class="section-subtitle">Write to Us</span>
-                        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Send Us a Message</h2>
-                        <form style="width: 100%;">
+                        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Send Us a Message</h2>
+                        <form style="width: 100%; max-width: 500px; margin: 0 auto; text-align: center;">
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label class="form-label"
                                     style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
