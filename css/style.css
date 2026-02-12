@@ -175,6 +175,7 @@ h3 {
     display: flex;
     gap: 2rem;
     align-items: center;
+    margin-left: auto;
 }
 
 .nav-item {
@@ -341,7 +342,13 @@ h3 {
 .navbar-right {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin-left: 1.5rem;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
 }
 
 @media (min-width: 992px) {
@@ -634,7 +641,7 @@ section {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -642,7 +649,8 @@ section {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 16 / 10;
     box-shadow: var(--shadow-md);
     transition: all 0.5s ease;
 }
@@ -734,9 +742,9 @@ section {
 }
 
 .team-img {
-    height: 300px;
-    background: #ccc;
     width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #ccc;
 }
 
 .team-img img {
@@ -1004,28 +1012,51 @@ section {
     transform: translateY(-2px);
 }
 
-/* Auth Pages */
+/* Auth Pages Setup */
+body.auth-page {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 .auth-container {
-    min-height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background: radial-gradient(circle at center, rgba(37, 99, 235, 0.05), transparent 60%);
+    box-sizing: border-box;
 }
 
 .auth-box {
     background: var(--bg-card);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 20px;
     width: 100%;
-    max-width: 450px;
+    max-width: 440px;
+    max-height: 95vh;
+    overflow-y: auto;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    /* Hide scrollbar but allow functional scroll if content overflows card */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-/* Responsive icon scaling for auth pages */
+.auth-box::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .auth-box {
+        padding: 2rem;
+    }
+
     .input-group i {
         font-size: 0.9rem;
         width: 0.9rem;
@@ -1036,14 +1067,24 @@ section {
     .input-group .form-control {
         padding-left: 2.6rem;
     }
-
-    .auth-box {
-        padding: 2rem;
-        margin: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
+    .auth-box {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .auth-box h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .auth-box .logo {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
     .input-group i {
         font-size: 0.85rem;
         width: 0.85rem;
@@ -1054,11 +1095,6 @@ section {
     .input-group .form-control {
         padding-left: 2.5rem;
         font-size: 0.9rem;
-    }
-
-    .auth-box {
-        padding: 1.5rem;
-        margin: 0.5rem;
     }
 }
 
@@ -1405,14 +1441,60 @@ section {
         top: 100%;
         left: 0;
         width: 100%;
+        height: calc(100vh - var(--header-height));
+        overflow: hidden;
+        /* No scrolling inside per request */
         background: var(--bg-card);
         flex-direction: column;
-        padding: 2rem;
+        padding: 1.5rem 2rem 2.5rem;
         border-bottom: 1px solid var(--border-color);
+        align-items: center;
+        text-align: center;
+        z-index: 1000;
+        justify-content: space-between;
+        /* Perfect vertical distribution */
+        box-sizing: border-box;
+    }
+
+    .navbar .nav-links .nav-item:not(.header-actions) {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .navbar .nav-links .nav-item.header-actions {
+        width: 100%;
+        padding: 0;
     }
 
     .navbar .nav-links.open {
         display: flex;
+    }
+
+    .navbar .nav-links .nav-item.dropdown.active .dropdown-menu {
+        display: block;
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0;
+    }
+
+    .navbar .nav-links .nav-item.dropdown.active>a i {
+        transform: rotate(180deg);
+    }
+
+    .navbar .nav-links .dropdown-menu li a {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
     }
 
     .mobile-menu-btn {
@@ -1422,20 +1504,29 @@ section {
     .header-actions {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        /* Keep on one row if possible */
         gap: 0.75rem;
         width: 100%;
-        margin-top: 1.5rem;
+        margin-top: 0.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
         align-items: center;
         justify-content: center;
+        flex: 0 0 auto;
     }
 
     .header-actions .btn {
-        flex: 1;
+        flex: 0 1 auto;
+        /* Don't force grow to full width */
         min-width: 120px;
+        max-width: 160px;
         text-align: center;
         font-size: 0.85rem;
         padding: 0.6rem 1rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .navbar-right {
@@ -1443,6 +1534,7 @@ section {
         margin-left: auto;
         display: flex;
         align-items: center;
+        gap: 0.75rem;
     }
 
     .navbar .logo {
@@ -1450,12 +1542,18 @@ section {
     }
 
     .header-actions .theme-toggle {
-        display: none;
+        display: none !important;
     }
 
     .navbar .nav-links .header-actions {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navbar-right .theme-toggle {
         display: flex;
-        /* Ensure it is visible inside the dropdown */
+        font-size: 1.25rem;
     }
 
     .footer-grid {
@@ -1492,10 +1590,6 @@ section {
         margin: 0 auto;
     }
 
-    .header-actions {
-        /* We want them visible in the menu, but maybe adjusted */
-        display: flex;
-    }
 
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1550,7 +1644,8 @@ section {
     }
 
     .header-actions .btn {
-        width: calc(50% - 0.5rem);
+        width: 100%;
+        max-width: 100%;
         min-width: unset;
     }
 

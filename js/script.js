@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleMobileMenu() {
         navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
         const icon = mobileBtn.querySelector('i');
         if (navLinks.classList.contains('open')) {
             icon.classList.remove('fa-bars');
@@ -81,12 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdown.addEventListener('click', (e) => {
             if (window.innerWidth <= 991) {
                 e.preventDefault();
-                const submenu = dropdown.nextElementSibling;
-                if (submenu) {
-                    submenu.style.visibility = (submenu.style.visibility === 'visible') ? 'hidden' : 'visible';
-                    submenu.style.opacity = (submenu.style.opacity === '1') ? '0' : '1';
-                    submenu.style.position = (submenu.style.position === 'static') ? 'absolute' : 'static'; // simple toggle logic for mobile
-                }
+                const parent = dropdown.parentElement;
+                parent.classList.toggle('active');
+            }
+        });
+    });
+
+    // Close menu when clicking a link
+    const navItems = document.querySelectorAll('.nav-links a:not(.dropdown > a)');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (navLinks.classList.contains('open')) {
+                toggleMobileMenu();
             }
         });
     });
