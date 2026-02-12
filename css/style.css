@@ -751,6 +751,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 .team-info {
@@ -1441,33 +1442,43 @@ body.auth-page {
         top: 100%;
         left: 0;
         width: 100%;
-        height: calc(100vh - var(--header-height));
-        overflow: hidden;
-        /* No scrolling inside per request */
+        height: auto;
+        /* Allow content to determine height */
+        max-height: calc(100vh - var(--header-height));
+        /* Prevent overflow off-screen */
+        overflow-y: auto;
+        /* Allow scrolling */
         background: var(--bg-card);
         flex-direction: column;
-        padding: 1.5rem 2rem 2.5rem;
+        padding: 2rem;
+        /* Consistent padding */
         border-bottom: 1px solid var(--border-color);
         align-items: center;
         text-align: center;
         z-index: 1000;
-        justify-content: space-between;
-        /* Perfect vertical distribution */
+        justify-content: flex-start;
+        /* Stack from top */
+        gap: 0;
+        /* Use item padding for gap */
+        box-shadow: var(--shadow-lg);
         box-sizing: border-box;
     }
 
     .navbar .nav-links .nav-item:not(.header-actions) {
         width: 100%;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0;
+        flex: 0 0 auto;
+        /* natural height */
+        display: block;
+        padding: 0.75rem 0;
+        /* Compact padding */
+        margin: 0;
     }
 
     .navbar .nav-links .nav-item.header-actions {
         width: 100%;
         padding: 0;
+        margin-top: 1rem;
+        /* improved spacing before buttons */
     }
 
     .navbar .nav-links.open {
@@ -1749,5 +1760,98 @@ body.auth-page {
         padding-top: calc(var(--header-height) + 40px);
         padding-bottom: 40px;
         min-height: 50vh;
+    }
+}
+
+/* =========================================
+   12. ABOUT PAGE ADJUSTMENTS
+   ========================================= */
+
+/* Desktop defaults */
+.about-intro-img {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 450px;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.about-intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mission-vision-img {
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.mission-vision-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tablet & Mobile (991px and below) */
+@media (max-width: 991px) {
+
+    /* Reset fixed heights and allow natural scaling */
+    .about-intro-img,
+    .mission-vision-img {
+        height: auto !important;
+        min-height: auto !important;
+        aspect-ratio: auto !important;
+    }
+
+    /* Ensure full visibility without cropping */
+    .about-intro-img img,
+    .mission-vision-img img {
+        width: 100%;
+        height: auto !important;
+        object-fit: contain !important;
+        /* Ensure image is not zoomed or cropped */
+    }
+
+    /* Fix timeline images cropping */
+    .timeline-img {
+        height: auto !important;
+        width: 100%;
+        object-fit: contain !important;
+        aspect-ratio: auto !important;
+    }
+}
+
+/* =========================================
+   13. PARTNER IMAGES (ABOUT PAGE)
+   ========================================= */
+.partner-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Ensure responsiveness for partner images */
+@media (max-width: 991px) {
+    .partner-img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-img {
+        width: 130px;
+        height: 130px;
     }
 }
