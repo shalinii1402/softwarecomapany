@@ -1437,52 +1437,52 @@ body.auth-page {
    ========================================= */
 @media (max-width: 991px) {
     .navbar .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--header-height);
         left: 0;
         width: 100%;
-        height: auto;
-        /* Allow content to determine height */
-        max-height: calc(100vh - var(--header-height));
-        /* Prevent overflow off-screen */
+        height: calc(100vh - var(--header-height));
+        background: var(--bg-glass);
+        backdrop-filter: blur(15px);
+        padding: 2rem 1.5rem;
+        z-index: 999;
         overflow-y: auto;
-        /* Allow scrolling */
-        background: var(--bg-card);
-        flex-direction: column;
-        padding: 2rem;
-        /* Consistent padding */
-        border-bottom: 1px solid var(--border-color);
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         align-items: center;
         text-align: center;
-        z-index: 1000;
         justify-content: flex-start;
-        /* Stack from top */
         gap: 0;
-        /* Use item padding for gap */
+        border-bottom: 1px solid var(--border-color);
         box-shadow: var(--shadow-lg);
-        box-sizing: border-box;
-    }
-
-    .navbar .nav-links .nav-item:not(.header-actions) {
-        width: 100%;
-        flex: 0 0 auto;
-        /* natural height */
-        display: block;
-        padding: 0.75rem 0;
-        /* Compact padding */
-        margin: 0;
-    }
-
-    .navbar .nav-links .nav-item.header-actions {
-        width: 100%;
-        padding: 0;
-        margin-top: 1rem;
-        /* improved spacing before buttons */
+        pointer-events: none;
     }
 
     .navbar .nav-links.open {
-        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .navbar .nav-links .nav-item {
+        width: 100%;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: block;
+        margin: 0;
+    }
+
+    [data-theme="dark"] .navbar .nav-links .nav-item {
+        border-bottom-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar .nav-links .nav-item:last-of-type {
+        border-bottom: none;
     }
 
     .navbar .nav-links .nav-item.dropdown.active .dropdown-menu {
@@ -1492,10 +1492,20 @@ body.auth-page {
         opacity: 1;
         visibility: visible;
         transform: none;
-        background: transparent;
+        background: rgba(0, 0, 0, 0.03);
         border: none;
         box-shadow: none;
         padding: 0.5rem 0;
+        margin-top: 1rem;
+        border-radius: 12px;
+    }
+
+    [data-theme="dark"] .navbar .nav-links .nav-item.dropdown.active .dropdown-menu {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .navbar .nav-links .nav-item.active::after {
+        display: none;
     }
 
     .navbar .nav-links .nav-item.dropdown.active>a i {
@@ -1503,41 +1513,43 @@ body.auth-page {
     }
 
     .navbar .nav-links .dropdown-menu li a {
-        padding: 0.5rem;
-        font-size: 0.85rem;
+        padding: 1rem;
+        font-size: 0.95rem;
         color: var(--text-muted);
+        display: block;
+        border-radius: 8px;
     }
 
     .mobile-menu-btn {
         display: block;
+        z-index: 1001;
     }
 
     .header-actions {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        /* Keep on one row if possible */
-        gap: 0.75rem;
+        gap: 1rem;
         width: 100%;
-        margin-top: 0.5rem;
-        padding-top: 1.5rem;
+        max-width: 400px;
+        margin: 2rem auto 0;
+        padding-top: 2rem;
         border-top: 1px solid var(--border-color);
         align-items: center;
         justify-content: center;
-        flex: 0 0 auto;
     }
 
     .header-actions .btn {
-        flex: 0 1 auto;
-        /* Don't force grow to full width */
-        min-width: 120px;
-        max-width: 160px;
+        flex: 1;
+        min-width: 110px;
+        max-width: 180px;
         text-align: center;
-        font-size: 0.85rem;
-        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
     }
 
     .navbar-right {
