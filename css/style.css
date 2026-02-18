@@ -255,6 +255,16 @@ h3 {
     padding-left: 1.8rem;
 }
 
+.dropdown-menu li a.active {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+[data-theme="dark"] .dropdown-menu li a.active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
 /* Auth Buttons */
 .auth-buttons {
     display: flex;
@@ -1518,6 +1528,16 @@ body.auth-page {
         color: var(--text-muted);
         display: block;
         border-radius: 8px;
+    }
+
+    .navbar .nav-links .dropdown-menu li a.active {
+        color: var(--primary);
+        background: rgba(0, 0, 0, 0.05);
+        font-weight: 600;
+    }
+
+    [data-theme="dark"] .navbar .nav-links .dropdown-menu li a.active {
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .mobile-menu-btn {
